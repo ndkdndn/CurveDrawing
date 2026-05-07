@@ -94,5 +94,5 @@ npm run dev
 
 除了本 README 外，项目还包含详细的代码解释文档，请参阅：
 
-- `documents/documents/interactive-curve-drawing-code-explanation.md` (或导出的 PDF 版本)
+- `documents/documents/交互式曲线绘制软件 - 完整代码解释文档.md` (或导出的 PDF 版本)
 
