@@ -14,6 +14,7 @@
 ## 技术栈
 
 ### 前端
+
 - **Vue 3** (Composition API, `<script setup>`)
 - **TypeScript**
 - **Vite**
@@ -24,6 +25,7 @@
 - **原生 Canvas API** (核心绘图)
 
 ### 后端
+
 - **Java 17**
 - **Spring Boot 3.2.x**
 - **Spring Web** (RESTful API)
@@ -56,10 +58,12 @@ gongye/
 确保已安装 **Java 17** 和 **Maven**。
 
 进入 `backend` 目录，运行以下命令启动服务：
+
 ```bash
 cd backend
 mvn spring-boot:run
 ```
+
 后端服务将在 `http://localhost:8080` 启动，并自动初始化 H2 数据库。
 
 ### 2. 启动前端 (Vue 3)
@@ -67,17 +71,20 @@ mvn spring-boot:run
 确保已安装 **Node.js** (推荐 v18+)。
 
 进入 `frontend` 目录，安装依赖并启动开发服务器：
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
+
 前端应用将在 `http://localhost:5173` 启动。在浏览器中打开该地址即可使用。
 
 ## 核心算法说明
 
 本项目的核心在于 **`frontend/src/utils/interpolation.ts`** 中的 `getCatmullRomCurve` 函数。
 为了实现经过所有控制顶点的平滑曲线，项目采用 Catmull-Rom 样条插值算法：
+
 1. 遍历所有相邻的四个顶点 (P0, P1, P2, P3)。
 2. 基于张力参数 (Tension) 计算 P1 到 P2 之间的插值点。
 3. 将所有生成的细分线段连接，交由 Canvas `lineTo` 渲染，最终呈现出光滑的曲线效果。
@@ -86,4 +93,6 @@ npm run dev
 ## 交付文档
 
 除了本 README 外，项目还包含详细的代码解释文档，请参阅：
-- `.trae/documents/interactive-curve-drawing-code-explanation.md` (或导出的 PDF 版本)
+
+- `documents/documents/interactive-curve-drawing-code-explanation.md` (或导出的 PDF 版本)
+
